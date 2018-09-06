@@ -16,6 +16,7 @@ package imageproxy
 
 import (
 	"fmt"
+	"image"
 	"net/http"
 	"net/url"
 	"regexp"
@@ -90,7 +91,17 @@ type Options struct {
 
 	// Automatically find good crop points based on image content.
 	SmartCrop bool
+
+	// Adaptations allows a caller to apply adaptations to the
+	// image post-decode.
+	Adaptations AdaptationsFunc
 }
+
+// AdaptationsFunc allows image and options modification in the
+// transform pipeline.
+type AdaptationsFunc func(
+	image image.Image, format string, opt Options,
+) (image.Image, string, Options)
 
 func (o Options) String() string {
 	opts := []string{fmt.Sprintf("%v%s%v", o.Width, optSizeDelimiter, o.Height)}

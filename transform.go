@@ -66,6 +66,11 @@ func Transform(img []byte, opt Options) ([]byte, error) {
 		}
 	}
 
+	// Allow for adaptations post-image decode.
+	if opt.Adaptations != nil {
+		m, format, opt = opt.Adaptations(m, format, opt)
+	}
+
 	// encode webp and tiff as jpeg by default
 	if format == "tiff" || format == "webp" {
 		format = "jpeg"
