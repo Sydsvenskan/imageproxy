@@ -1,0 +1,33 @@
+module willnorris.com/go/imageproxy
+
+require (
+	cloud.google.com/go v0.0.0-20180131234750-2de512d2700d
+	github.com/Azure/azure-sdk-for-go v12.3.0-beta+incompatible
+	github.com/Azure/go-autorest v9.9.0+incompatible
+	github.com/PaulARoy/azurestoragecache v0.0.0-20170906084534-3c249a3ba788
+	github.com/aws/aws-sdk-go v0.0.0-20180126231901-00cca3f093a8
+	github.com/dgrijalva/jwt-go v3.1.0+incompatible
+	github.com/die-net/lrucache v0.0.0-20171111232917-04b9315ab7a6
+	github.com/disintegration/imaging v1.3.0
+	github.com/garyburd/redigo v1.5.0
+	github.com/golang/protobuf v1.0.0
+	github.com/google/btree v0.0.0-20180124185431-e89373fe6b4a
+	github.com/googleapis/gax-go v2.0.0+incompatible
+	github.com/gregjones/httpcache v0.0.0-20171119193500-2bcd89a1743f
+	github.com/marstr/guid v0.0.0-20170427235115-8bdf7d1a087c
+	github.com/muesli/smartcrop v0.0.0-20171215203440-9032446b30f6
+	github.com/nfnt/resize v0.0.0-20160724205520-891127d8d1b5
+	github.com/peterbourgon/diskv v0.0.0-20171120014656-2973218375c3
+	github.com/rwcarlsen/goexif v0.0.0-20141222211634-41dad3aa0833
+	github.com/satori/go.uuid v0.0.0-20180103174451-36e9d2ebbde5
+	github.com/satori/uuid v0.0.0-20180103174451-36e9d2ebbde5
+	golang.org/x/image v0.0.0-20171214225156-12117c17ca67
+	golang.org/x/net v0.0.0-20180201232540-b417086c80e9
+	golang.org/x/oauth2 v0.0.0-20180126164932-a032972e2806
+	golang.org/x/text v0.0.0-20171227012246-e19ae1496984
+	google.golang.org/api v0.0.0-20180202000329-f7618f4b41ca
+	google.golang.org/appengine v0.0.0-20171212223047-5bee14b453b4
+	google.golang.org/genproto v0.0.0-20180125080656-4eb30f4778ee
+	google.golang.org/grpc v0.0.0-20180201193814-f9628db66d14
+	willnorris.com/go/gifresize v0.0.0-20160428232521-6a222229fa06
+)
