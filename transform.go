@@ -121,6 +121,7 @@ func Transform(img []byte, opt Options) ([]byte, error) {
 			quality = defaultQuality
 		}
 
+		m = transformImage(m, opt)
 		err = webp.Encode(buf, m, &webp.Options{
 			Quality: float32(quality),
 		})
