@@ -6,6 +6,7 @@ require (
 	github.com/Azure/go-autorest v9.9.0+incompatible
 	github.com/PaulARoy/azurestoragecache v0.0.0-20170906084534-3c249a3ba788
 	github.com/aws/aws-sdk-go v0.0.0-20180126231901-00cca3f093a8
+	github.com/chai2010/webp v1.0.0
 	github.com/dgrijalva/jwt-go v3.1.0+incompatible
 	github.com/die-net/lrucache v0.0.0-20171111232917-04b9315ab7a6
 	github.com/disintegration/imaging v1.3.0

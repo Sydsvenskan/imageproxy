@@ -25,6 +25,7 @@ import (
 	"log"
 	"math"
 
+	"github.com/chai2010/webp"
 	"github.com/disintegration/imaging"
 	"github.com/muesli/smartcrop"
 	"github.com/rwcarlsen/goexif/exif"
@@ -111,6 +112,18 @@ func Transform(img []byte, opt Options) ([]byte, error) {
 	case "tiff":
 		m = transformImage(m, opt)
 		err = tiff.Encode(buf, m, &tiff.Options{tiff.Deflate, true})
+		if err != nil {
+			return nil, err
+		}
+	case "webp":
+		quality := opt.Quality
+		if quality == 0 {
+			quality = defaultQuality
+		}
+
+		err = webp.Encode(buf, m, &webp.Options{
+			Quality: float32(quality),
+		})
 		if err != nil {
 			return nil, err
 		}
